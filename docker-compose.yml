@@ -1,0 +1,19 @@
+php:
+  image: php:8.0-apache
+  container_name: container-php
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - ./src:/var/www/html
+  links:
+    - db
+db:
+  image: mysql:latest
+  container_name: container-mysql-php
+  ports:
+    - "3308:3306"
+  volumes:
+    - ./db:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
