@@ -1,3 +1,6 @@
 db/
 .gitignore.bak
+<<<<<<< HEAD
 src/
+=======
+>>>>>>> c9ae840bc2a88361b58c2266762415a41b5c5ff7
