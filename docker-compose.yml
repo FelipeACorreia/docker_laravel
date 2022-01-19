@@ -12,7 +12,7 @@ services:
       - ./src:/var/www/html
     links:
       - db
-  db:
+  db:           
     image: mysql:latest
     container_name: container-mysql-php
     ports:
